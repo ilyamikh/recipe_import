@@ -15,14 +15,15 @@ class Contribution:
 
 class MenuItem:
     """Object type that will hold data for each menu item"""
-    def __init__(self, name, displayname, servings, servingsize, recipeyield, ingredients, contributions):
+    def __init__(self, name, contributions, displayname=None, servings=None, servingsize=None, recipeyield=None, ingredients=None):
         self.name = name
+        self.contributions = contributions
         self.display_name = displayname
         self.servings = servings
         self.servingsize = servingsize
         self.recipeyield = recipeyield
         self.ingredients = ingredients
-        self.contributions = contributions
+
 
 
 class Meal:

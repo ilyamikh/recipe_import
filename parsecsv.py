@@ -10,11 +10,11 @@ def parse(raw_dict):
         menuitemlist.append(
            MenuItem(name=key,
                     displayname=displayname(key),
+                    contributions=contribs(raw_dict[key]),
                     servings=servings(raw_dict[key]),
                     servingsize=servingsize(raw_dict[key]),
                     recipeyield=recipeyield(raw_dict[key]),
-                    ingredients=ingredients(raw_dict[key]),
-                    contributions=contribs(raw_dict[key])
+                    ingredients=ingredients(raw_dict[key])
                     )
             )
 

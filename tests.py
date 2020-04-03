@@ -1,4 +1,4 @@
-import getcsv, sys, parsecsv, pickle, os, itemio
+import getcsv, sys, parsecsv, pickle, os, itemio, menuobjects
 
 
 folder = sys.argv[1]
@@ -22,3 +22,15 @@ for file in os.listdir("saved_items"):
               "QTY: " + ingredient.quantity, "\t",
               "UNIT: " + ingredient.unit)
     print("***")
+
+frac = ["1", "1/4"]
+contribute1 = menuobjects.Contribution(quantity=str(["1/4"]), unit="Veg-S")
+contribute2 = menuobjects.Contribution(quantity=str(frac), unit="Veg-RO")
+
+contriblist = [contribute1, contribute2]
+
+salad = menuobjects.MenuItem(name="The Salad", contributions=contriblist)
+print(salad.name)
+for contrib in salad.contributions:
+    print("QTY: " + contrib.quantity + "\t" + "TYPE: " + contrib.unit)
+
