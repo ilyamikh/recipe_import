@@ -1,4 +1,4 @@
-import getcsv, sys, parsecsv, pickle, os
+import getcsv, sys, parsecsv, pickle, os, itemio
 
 
 folder = sys.argv[1]
@@ -7,7 +7,7 @@ recipies = getcsv.parse_rows(raw)
 list = parsecsv.parse(recipies)
 
 for item in list:
-    pickle.dump(item, open("saved_items/" + item.name + ".menuitem", "wb"))
+    itemio.save_item(item)
 
 sample_item = pickle.load(open("saved_items/" + "Barley-Soup-B12 (LR1049) - (Barley Soup).menuitem", "rb"))
 

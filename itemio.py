@@ -2,4 +2,4 @@ import pickle
 
 
 def save_item(item):
-    pass
+    pickle.dump(item, open("saved_items/" + item.name + ".menuitem", "wb"))
