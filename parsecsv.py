@@ -36,7 +36,7 @@ def qty(rawstring):
         if len(item):
             res.append(item)  # get rid of empty strings
 
-    return res[0]
+    return str(res[:-1])
 
 
 def unit(rawstring):
@@ -47,7 +47,7 @@ def unit(rawstring):
         if len(item):
             vals.append(item)  # get rid of blank strings
     res = ''
-    for val in vals[1:]:
+    for val in vals[-1:]:
         res += val  # in case there are more than 1 str for unit
 
     return res

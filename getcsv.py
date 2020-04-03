@@ -7,7 +7,7 @@ def load_data(folder):
     """Loads all the .csv files in the specified folder and returns a dictionary"""
     raw_data = dict()
     for file in listdir(folder):
-        path = folder + file
+        path = folder + "/" + file
         key = file[:-4]  # remove file extension from the key name
         raw_data[key] = open(path)
 
